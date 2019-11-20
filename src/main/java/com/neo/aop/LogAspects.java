@@ -13,9 +13,8 @@ import java.util.Arrays;
 @Aspect
 public class LogAspects {
 
-    @Pointcut("execution(public int com.neo.aop.MathCalculator.div(..))")
-    public void pointCut() {
-    }
+    @Pointcut("execution(* com.neo.aop.MathCalculator.div(..))")
+    public void pointCut() {}
 
     @Before("pointCut()")
     public void before(JoinPoint point) {
